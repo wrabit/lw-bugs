@@ -8,25 +8,12 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     
     <title>{{ config('app.name', 'Laravel') }}</title>
-    
-    <!-- Scripts -->
-    <script src="{{ mix('js/app.js') }}"></script>
-    
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-    
     @livewireStyles
-    @stack('scripts-head')
 </head>
-
 <body>
-
 {{ $slot  }}
-
 @livewireScripts
-@stack('scripts')
 </body>
 </html>
